@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Math</title>
+</head>
+<body>
+<center><input type="button" value="Розгалужений обчислювальний процес" onclick="calculate()"></center>
+<script>
+var xmin = prompt('Введіть xmin', '');
+var xmax = prompt('Введіть xmax', '');
+var F;
+function calculate(){
+for (var i = Number(xmax); i >= Number(xmin); i -= 2) {
+if (i < 4) {
+F = Math.abs(i) + Math.exp(i);
+} else if (i === 4) {
+F = Math.PI;
+} else if (i > 4) {
+F = 1 / Math.tan(i) + Math.log(i);
+}
+alert("Результат розрахунків при аргументі " + i + " = " + F);
+}
+}
+</script>
+</body>
+</html>
